@@ -1,0 +1,16 @@
+# Local credentials and runtime data
+.env
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.log
+office/data/
+office/.docker-config/
+
+# Generated files and local tooling
+node_modules/
+coverage/
+sites/
+portfolio/
+.DS_Store
+Thumbs.db

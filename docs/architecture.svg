@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">AI Agent Office Technology Stack Architecture</title>
+  <desc id="desc">Browser UI connects to a Node.js API over HTTP and SSE. API enqueues work for an orchestrator that launches Codex CLI. SQLite and file workspace persist state and artifacts. Docker Compose contains the local runtime.</desc>
+  <defs>
+    <marker id="blueArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#2875E8"/></marker>
+    <marker id="greyArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#8BA2BD"/></marker>
+    <style>
+      text{font-family:'Pretendard','Noto Sans KR','Malgun Gothic',sans-serif}
+      .top{font-size:19px;font-weight:800;letter-spacing:3px;fill:#2875E8}
+      .title{font-size:62px;font-weight:800;letter-spacing:-2px;fill:#16243B}
+      .boundary{font-size:27px;font-weight:800;fill:#184F96}
+      .section{font-size:18px;font-weight:800;letter-spacing:2px;fill:#7A91AD}
+      .name{font-size:32px;font-weight:800;fill:#1B2D49}
+      .nameWhite{font-size:32px;font-weight:800;fill:#FFFFFF}
+      .sub{font-size:21px;font-weight:700;fill:#70839C}
+      .badge{font-size:30px;font-weight:800;fill:#FFFFFF}
+      .badgeSmall{font-size:24px;font-weight:800;fill:#FFFFFF}
+      .wire{font-size:19px;font-weight:800;fill:#3268B5}
+      .wireGrey{font-size:19px;font-weight:800;fill:#7288A4}
+    </style>
+  </defs>
+  <rect width="1920" height="1080" fill="#F7F9FD"/>
+  <rect x="0" y="0" width="1920" height="13" fill="#2875E8"/>
+  <text class="top" x="86" y="79">PLATFORM ENGINEERING PORTFOLIO</text>
+  <text class="title" x="86" y="154">AI Agent Office</text>
+  <text class="section" x="91" y="202">SYSTEM ARCHITECTURE  /  TECHNOLOGY STACK</text>
+
+  <!-- Local user and browser -->
+  <text class="section" x="96" y="323">CLIENT</text>
+  <rect x="86" y="352" width="304" height="448" rx="27" fill="#FFFFFF" stroke="#DCE5F2" stroke-width="2"/>
+  <rect x="110" y="381" width="256" height="183" rx="18" fill="#EAF2FF" stroke="#BED3F3" stroke-width="2"/>
+  <rect x="140" y="414" width="196" height="120" rx="12" fill="#FFFFFF" stroke="#6D9CE2" stroke-width="5"/>
+  <rect x="140" y="414" width="196" height="23" rx="10" fill="#2875E8"/>
+  <circle cx="158" cy="426" r="5" fill="#D8E8FF"/><circle cx="174" cy="426" r="5" fill="#D8E8FF"/><circle cx="190" cy="426" r="5" fill="#D8E8FF"/>
+  <text x="238" y="505" text-anchor="middle" font-size="56" font-weight="800" fill="#2875E8">JS</text>
+  <text class="name" x="238" y="636" text-anchor="middle">Browser UI</text>
+  <text class="sub" x="238" y="680" text-anchor="middle">HTML · CSS · JavaScript</text>
+  <rect x="152" y="718" width="172" height="44" rx="22" fill="#EAF2FF"/>
+  <text x="238" y="748" text-anchor="middle" font-size="18" font-weight="800" fill="#2875E8">Vanilla JS</text>
+
+  <!-- Runtime boundary -->
+  <rect x="482" y="265" width="1352" height="644" rx="30" fill="#EEF4FD" stroke="#9ABCEB" stroke-width="3"/>
+  <rect x="513" y="289" width="56" height="56" rx="14" fill="#1785E7"/>
+  <text class="badge" x="541" y="328" text-anchor="middle">D</text>
+  <text class="boundary" x="589" y="325">Docker Compose</text>
+  <text x="1794" y="325" text-anchor="end" font-size="19" font-weight="800" fill="#6F8BAE">LOCAL RUNTIME</text>
+
+  <!-- App boundary -->
+  <rect x="520" y="367" width="755" height="352" rx="25" fill="#F8FBFF" stroke="#B6CEE8" stroke-width="2"/>
+  <rect x="546" y="392" width="53" height="53" rx="14" fill="#5EAC40"/>
+  <text class="badge" x="572" y="429" text-anchor="middle">N</text>
+  <text class="boundary" x="617" y="428" style="fill:#3C792B">Node.js 24</text>
+  <text x="1244" y="426" text-anchor="end" font-size="18" font-weight="800" fill="#86A17D">APPLICATION</text>
+
+  <!-- API -->
+  <rect x="548" y="473" width="304" height="213" rx="21" fill="#FFFFFF" stroke="#D7E2EF" stroke-width="2"/>
+  <rect x="666" y="490" width="68" height="68" rx="17" fill="#2875E8"/>
+  <text class="badgeSmall" x="700" y="534" text-anchor="middle">API</text>
+  <text class="name" x="700" y="605" text-anchor="middle">HTTP Server</text>
+  <rect x="582" y="626" width="124" height="42" rx="21" fill="#EAF2FF"/>
+  <text x="644" y="655" text-anchor="middle" font-size="20" font-weight="800" fill="#2875E8">REST</text>
+  <rect x="718" y="626" width="98" height="42" rx="21" fill="#EAF2FF"/>
+  <text x="767" y="655" text-anchor="middle" font-size="20" font-weight="800" fill="#2875E8">SSE</text>
+
+  <!-- Worker -->
+  <rect x="934" y="473" width="313" height="213" rx="21" fill="#FFFFFF" stroke="#D7E2EF" stroke-width="2"/>
+  <rect x="1056" y="490" width="68" height="68" rx="17" fill="#624FBA"/>
+  <text class="badgeSmall" x="1090" y="534" text-anchor="middle">Q</text>
+  <text class="name" x="1090" y="605" text-anchor="middle">Orchestrator</text>
+  <rect x="969" y="626" width="244" height="42" rx="21" fill="#F0EDFF"/>
+  <text x="1091" y="655" text-anchor="middle" font-size="20" font-weight="800" fill="#624FBA">SQLite-backed queue</text>
+
+  <!-- Codex CLI -->
+  <rect x="1353" y="367" width="438" height="352" rx="25" fill="#17263D" stroke="#334969" stroke-width="2"/>
+  <rect x="1391" y="405" width="360" height="170" rx="17" fill="#0C1729" stroke="#6681A7" stroke-width="2"/>
+  <circle cx="1420" cy="432" r="6" fill="#EB6B6B"/><circle cx="1440" cy="432" r="6" fill="#F4BD64"/><circle cx="1460" cy="432" r="6" fill="#60C694"/>
+  <text x="1423" y="521" font-size="70" font-weight="800" fill="#8BBFFF" font-family="Consolas,monospace">&gt;_</text>
+  <text class="nameWhite" x="1572" y="635" text-anchor="middle">Codex CLI</text>
+  <text x="1572" y="674" text-anchor="middle" font-size="21" font-weight="700" fill="#9AB3D2">JSON Schema output</text>
+
+  <!-- Storage -->
+  <rect x="558" y="755" width="537" height="119" rx="20" fill="#FFFFFF" stroke="#D5E1F0" stroke-width="2"/>
+  <rect x="584" y="781" width="66" height="66" rx="17" fill="#156EAA"/>
+  <text class="badgeSmall" x="617" y="823" text-anchor="middle">DB</text>
+  <text class="name" x="680" y="813">SQLite</text>
+  <text class="sub" x="681" y="847">WAL · task / event / consultation</text>
+  <rect x="1123" y="755" width="637" height="119" rx="20" fill="#FFFFFF" stroke="#D5E1F0" stroke-width="2"/>
+  <rect x="1149" y="781" width="66" height="66" rx="17" fill="#E7A737"/>
+  <text class="badgeSmall" x="1182" y="823" text-anchor="middle">FS</text>
+  <text class="name" x="1246" y="813">File Workspace</text>
+  <text class="sub" x="1247" y="847">documents / jobs / artifacts</text>
+
+  <!-- Protocol arrows -->
+  <path d="M397 531 H537" fill="none" stroke="#2875E8" stroke-width="5" marker-end="url(#blueArrow)"/>
+  <text class="wire" x="467" y="509" text-anchor="middle">HTTP / REST</text>
+  <path d="M537 638 H397" fill="none" stroke="#8BA2BD" stroke-width="4" marker-end="url(#greyArrow)"/>
+  <text class="wireGrey" x="467" y="676" text-anchor="middle">SSE</text>
+  <path d="M859 548 H923" fill="none" stroke="#2875E8" stroke-width="5" marker-end="url(#blueArrow)"/>
+  <text class="wire" x="891" y="520" text-anchor="middle">enqueue</text>
+  <path d="M1283 515 H1342" fill="none" stroke="#2875E8" stroke-width="5" marker-end="url(#blueArrow)"/>
+  <text class="wire" x="1312" y="486" text-anchor="middle">exec</text>
+  <path d="M1342 653 H1283" fill="none" stroke="#8BA2BD" stroke-width="4" marker-end="url(#greyArrow)"/>
+  <text class="wireGrey" x="1312" y="685" text-anchor="middle">JSON</text>
+  <path d="M708 692 V743" fill="none" stroke="#2875E8" stroke-width="4" marker-end="url(#blueArrow)"/>
+  <text class="wire" x="754" y="731" text-anchor="middle">SQL</text>
+  <path d="M1100 692 V743" fill="none" stroke="#2875E8" stroke-width="4" marker-end="url(#blueArrow)"/>
+  <text class="wire" x="1153" y="731" text-anchor="middle">files</text>
+  <path d="M1572 724 V743" fill="none" stroke="#8BA2BD" stroke-width="4" marker-end="url(#greyArrow)"/>
+
+  <rect x="85" y="951" width="1750" height="80" rx="17" fill="#EAF1FA"/>
+  <text class="section" x="120" y="1002">IMPLEMENTATION</text>
+  <text x="416" y="1004" font-size="22" font-weight="750" fill="#375575">Node.js built-in test runner</text>
+  <circle cx="766" cy="995" r="4" fill="#9CB0CA"/>
+  <text x="798" y="1004" font-size="22" font-weight="750" fill="#375575">Docker Compose volumes</text>
+  <circle cx="1137" cy="995" r="4" fill="#9CB0CA"/>
+  <text x="1169" y="1004" font-size="22" font-weight="750" fill="#375575">Per-agent workspaces</text>
+</svg>

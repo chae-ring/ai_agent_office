@@ -1,0 +1,9 @@
+data/
+.docker-config/
+.env
+node_modules/
+*.log
+*.sqlite*
+*.tar.gz
+README.md
+worker.test.js

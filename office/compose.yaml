@@ -1,0 +1,16 @@
+services:
+  office:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3000:3000"
+    environment:
+      OFFICE_PASSWORD: ${OFFICE_PASSWORD:?Set OFFICE_PASSWORD in .env}
+      SESSION_SECRET: ${SESSION_SECRET:?Set SESSION_SECRET in .env}
+      CODEX_API_KEY: ${CODEX_API_KEY:-}
+    volumes:
+      - office_data:/app/data
+      - codex_home:/home/node/.codex
+volumes:
+  office_data:
+  codex_home:
